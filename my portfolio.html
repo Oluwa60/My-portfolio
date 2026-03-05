@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color:#FBF8CC;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a{text-decoration: none;
+     color: #03045E;
+
+    }
+    nav{
+        display: flex;
+        gap: 60px;
+        font-style: normal;
+        color: blue;
+        font-weight: 600;
+        padding-right: 150px;
+    }
+    span{
+        font-style: normal;
+        font-weight: 700;
+        color: #03045E;
+    }
+    .thumbnail{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 80px;
+
+    }
+    .herotext{
+        text-align: left;
+        font-size: 20px;
+        width: 50%;
+    }
+    p{
+        font-style: normal;
+        color: rgb(6, 6, 86);
+        font-weight: 100;
+    }
+    .bold{
+        display: block;
+        font-size: 110px;
+        font-style: unset;
+        font-weight: 700;
+        line-height: 7rem;
+        color:  #454213;
+
+    }
+    button{
+        width: 125px;
+        height: 50px;
+        background-color: #F5EE84;
+    }
+    .img{
+        width: 50%;
+        padding-left: 80px;
+    }
+    #images{
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+    }
+    .about{
+        width: 70%;
+        margin-top: 160px;
+    }
+    h2{font-size: 110px;
+        font-style: inherit;
+        color: #454213;
+    }
+    .aboutp{
+        margin-top: -60px;
+        text-align: left;
+        text-decoration: none;
+        line-height: 1.5rem;
+    }
+    .listsection{
+        display: flex;
+        justify-content: end;
+        padding-top: 80px;
+    }
+    .lisec{
+        width: 70%;
+        line-height: 1.5rem;
+        text-decoration: none;
+        font-weight: 100;
+    }
+    li{
+       color: #03045E;
+       font-weight: 700;
+    }
+    .Work{
+        width: 70%;
+    }
+    .casebody{
+        display: flex;
+        justify-content: space-between;
+    }
+    h3{ color: #03045E;
+}
+    #case{
+        width: 45%;
+    }
+    #caseimg{
+        width: 100%;
+    }
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        gap: 20%;
+    }
+    .contactlorem{
+        width: 65%;
+        padding-right: 80px;
+    }
+    #contactinfo{
+        display: block;
+        line-height: 1.5rem;
+        font-weight: 700;
+        font-size: x-large;
+        color: #03045E;
+    }
+    #lstimg{
+        width: 45%;
+    }
+    #lstlorem{line-height: 2rem;}
+
+
+
+    @media (max-width: 768px) {
+        body{
+        padding-top: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        }
+
+        .header{
+        display: flex;
+        align-items: center;
+        }
+        nav{ display: none;}
+        .thumbnail{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        }
+        .herotext{
+        text-align: center;
+        font-size: 18px;
+        width: 100%;
+    }
+    .bold{
+        display: block;
+        font-size: 80px;
+        font-style: unset;
+        font-weight: 500;
+        line-height: 4rem;
+        color: #03045E;
+
+    }
+    .img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 10px;
+    }
+    button{ width: 80%;
+        height: 50px;
+        margin-top: 30px;
+        border-radius: 30%;
+        background-color: #F5EE84;}
+    #images{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;}
+        .listsection{
+            display: none;
+        }
+        .about, .Work{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 80px;
+        }
+        h2{font-size: 90px;
+        font-style: inherit;
+        color: #454213;
+        display: flex;
+        justify-content: center;
+    }
+    .aboutp{margin-top: 30px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1.5rem;
+    }
+    .casebody{display: none;}
+    #lstimg{display: none;}
+    
+    #contactinfo{
+        display: block;
+    }
+    #lstlorem{display: none;
+    }
+    #contactinfo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        
+    }
+
+
+
+}    
+    
+
+</style>
+<body>
+    <div class="header">
+        <span>Seyifunmi Joshua</span>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Work</a>
+        </nav>
+    </div>
+
+    <section class="thumbnail">
+        <div class="herotext">
+          <p>Hello, I'm Josh, <span class="bold">Full Stack Developer</span>based in Nigeria</p> 
+          
+          <button>Resume</button>
+        </div>
+        <div class="img">
+            <img id="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s" alt="" srcset="">
+        </div>
+    </section>
+    <section class="about">
+        <h2>about</h2>
+        <p class="aboutp">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quae, explicabo, tempora deserunt delectus animi ad accusantium aperiam odit totam temporibus cupiditate molestiae, officia repellendus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi expedita dignissimos vero corrupti optio id nostrum delectus itaque! Pariatur non laboriosam sed fugiat quis at dicta quaerat ab, ad minima.
+        </p>
+    </section>
+    <div class="listsection">
+        <div class="lisec">
+            <li>2015-2018
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur minus quam totam, magnam eius officiis, dolores dolorum error alias temporibus sint perspiciatis doloremque. Tempore odit aliquid distinctio! Excepturi, sequi ducimus.
+                Est voluptatem sint quo pariatur libero, omnis a possimus corporis iusto ratione non doloremque quam unde nostrum quasi magni quae officiis iure. Odio magni nisi molestias cupiditate paria</p>
+            </li>
+            <li>2018-2020
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore modi molestias quis, molestiae dignissimos iste in quo repudiandae eos repellat dolorum minima ullam aperiam ut quasi porro perferendis ipsa tempore.
+                Beatae libero fugiat iste architecto ullam quibusdam asperiores reiciendis natus perferendis corporis veniam, iure cupiditate dicta pariatur adipisci et voluptates. Optio, facere rem. Laudantium corrupti fugit voluptatibus adipisci possimus consequatur.</p>
+            </li>
+            <li>2020-present
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dignissimos officiis, accusantium vitae eum molestias laudantium inventore, quas ex consequuntur nostrum facilis laborum velit. Quisquam deserunt consequuntur sunt consequatur tempore.
+                Reiciendis, incidunt nihil blanditiis sequi doloribus commodi id. A quod obcaecati minima perspiciatis ut fugit eum laborum natus quam. Maxime ducimus sint tenetur saepe repellendus impedit magnam? Aperiam, dolorum numquam.</p>
+            </li>
+        </div>
+    </div>
+    <div class="Work">
+        <h2>work</h2>
+        <p class="aboutp">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illum nobis ipsa quae quidem officiis minus quo totam. Numquam, similique? Explicabo suscipit iste laboriosam possimus consequatur modi fugit dignissimos asperiores.
+            Omnis, aperiam! Porro libero ipsum magni rerum amet atque excepturi, ad reprehenderit accusamus facilis, voluptatibus iure? Laudantium cumque, corrupti, quos dolorem eveniet, fugiat debitis tempore fuga placeat voluptatibus vitae obcaecati.
+        </p>
+    </div>
+    <div class="casebody">
+        <div id="case">
+            <img id="caseimg" src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-placeholder-line-icon-vector-png-image_6691835.png"  alt="" srcset="">
+            <div class="casetext">
+                <h3>Some Case Study</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus quae ad, quos animi inventore magnam voluptates distinctio aspernatur dolores aut, odio minima laborum tempora perferendis placeat corrupti saepe repellat.</p>
+            </div> 
+        </div>
+        <div id="case">
+            <img id="caseimg" src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-placeholder-line-icon-vector-png-image_6691835.png"  alt="" srcset="">
+            <div class="casetext">
+                <h3>Some Case Study</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus quae ad, quos animi inventore magnam voluptates distinctio aspernatur dolores aut, odio minima laborum tempora perferendis placeat corrupti saepe repellat.</p>
+            </div> 
+        </div>
+    </div>
+    <h2>contact.</h2>
+        <div class="contact">
+            <img id="lstimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUTDs10iPsW0-BcgtkGb0Ym3LEIBqWX8XVkQ&s" alt="" srcset="">
+            <div class="contactlorem">
+                <p id="lstlorem">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam illo iure commodi omnis ex nesciunt voluptatem veniam sint possimus fuga, culpa distinctio nam magni quo dignissimos earum aliquam architecto! adipisicing elit. Enim iusto natus ipsa. Debitis facere dolores autem ipsum similique itaque nihil eum fugiat voluptatum quibusdam nobis vel obcaecati, ea nisi repellendus.</p>
+                <div id="contactinfo">
+                    seyifunmi.as@gmail.com <br>
+                    X.com/Oluwa_Lo_Seyii
+                </div>
+            </div>
+        </div>
+
+    
+</body>
+</html>
