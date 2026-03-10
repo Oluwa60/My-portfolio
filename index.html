@@ -27,8 +27,47 @@
         font-style: normal;
         color: blue;
         font-weight: 600;
-        padding-right: 150px;
+        padding-left: 120px;
+        padding-right: 120px;
     }
+    
+    .mobilenav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width:250px;
+        z-index: 999;
+        background-color: rgba(245, 245, 245, 0.089);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0 , 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+    .mobilenav a{
+        width: 100%;
+        text-decoration: none;
+    }
+    
+
+    .logo{   
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+
+    }
+    .logo img{  
+      width:20px;
+    }
+    svg {
+        display: ;
+        width: 20px;
+        cursor: pointer;}
     span{
         font-style: normal;
         font-weight: 700;
@@ -138,8 +177,9 @@
         width: 45%;
     }
     #lstlorem{line-height: 2rem;}
-
-
+   .menubutton{
+        display: none;
+    }
 
     @media (max-width: 768px) {
         body{
@@ -152,19 +192,27 @@
         display: flex;
         align-items: center;
         }
-        nav{ display: none;}
+       nav{
+        display: none;
+       }
+       .menubutton{
+        display: block;
+       }
         .thumbnail{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         width: 100%;
         }
+        .logo{
+            display: none;
+        }
         .herotext{
         text-align: center;
         font-size: 18px;
         width: 100%;
-    }
-    .bold{
+        }
+       .bold{
         display: block;
         font-size: 80px;
         font-style: unset;
@@ -173,18 +221,18 @@
         color: #03045E;
 
     }
-    .img{
+       .img{
         width: 100%;
         display: flex;
         justify-content: center;
         padding-left: 10px;
     }
-    button{ width: 80%;
+        button{ width: 80%;
         height: 50px;
         margin-top: 30px;
         border-radius: 30%;
         background-color: #F5EE84;}
-    #images{
+       #images{
         width: 350px;
         height: 350px;
         border-radius: 50%;}
@@ -203,25 +251,27 @@
         display: flex;
         justify-content: center;
     }
-    .aboutp{margin-top: 30px;
+       .aboutp{margin-top: 30px;
         text-align: center;
         text-decoration: none;
         line-height: 1.5rem;
     }
-    .casebody{display: none;}
-    #lstimg{display: none;}
+      .casebody{display: none;}
+       #lstimg{display: none;}
     
-    #contactinfo{
+       #contactinfo{
         display: block;
     }
-    #lstlorem{display: none;
+       #lstlorem{display: none;
     }
-    #contactinfo{
-        display: flex;
-        justify-content: center;
+       #contactinfo{
+        display: row;
         margin-bottom: 40px;
-        
+        padding-bottom: 30px;
+        padding-top: -30px;
     }
+
+
 
 
 
@@ -237,6 +287,26 @@
             <a href="#">About</a>
             <a href="#">Work</a>
         </nav>
+        <nav class="mobilenav">
+            <li onclick="hidemobilenav()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Work</a>
+            <a href="#">Contact</a>
+        </nav>
+
+
+        <div class="logo">
+            <img src="instagram.svg" alt="">
+            <img src="x-twitter.svg" alt="">
+            <img src="facebook-f.svg" style="width: 15px;" alt="">
+        </div>
+        <div>
+            <li class="menubutton" onclick="showmobilenav()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </div>
+
+
+        
     </div>
 
     <section class="thumbnail">
@@ -300,12 +370,22 @@
             <div class="contactlorem">
                 <p id="lstlorem">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam illo iure commodi omnis ex nesciunt voluptatem veniam sint possimus fuga, culpa distinctio nam magni quo dignissimos earum aliquam architecto! adipisicing elit. Enim iusto natus ipsa. Debitis facere dolores autem ipsum similique itaque nihil eum fugiat voluptatum quibusdam nobis vel obcaecati, ea nisi repellendus.</p>
                 <div id="contactinfo">
-                    seyifunmi.as@gmail.com <br>
-                    X.com/Oluwa_Lo_Seyii
+                   <img src="instagram.svg" width="25px"  alt=""> Oluwa_lo_seyi<br>
+                   <img src="x-twitter.svg" width="25px" alt="">  Oluwa_Lo_Seyii <br>
+                   <img src="facebook-f.svg" width="20px" alt=""> Oluwa Lo Seyi
                 </div>
             </div>
         </div>
 
-    
+<script>
+    function showmobilenav(){
+        const mobilenav = document.querySelector('.mobilenav')
+        mobilenav.style.display = 'flex'
+    }
+    function hidemobilenav(){
+        const mobilenav = document.querySelector('.mobilenav')
+        mobilenav.style.display = 'none'
+    }
+</script>  
 </body>
 </html>
