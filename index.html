@@ -30,23 +30,6 @@
         padding-left: 120px;
         padding-right: 120px;
     }
-    /* nav span{
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 95px;
-        height: 100%;
-        background: linear-gradient(45deg, #454213, #03045E);
-        transition: 5s;
-    }
-    nav a:nth-child(1):hover~span{
-        left: 0;
-    }
-    nav a:nth-child(2):hover~span{
-        left: 95px;
-    } */
-
-
     .mobilenav{
         position: fixed;
         top: 0;
@@ -55,13 +38,15 @@
         width:250px;
         z-index: 999;
         background-color: rgba(245, 245, 245, 0.089);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(40px);
         box-shadow: -10px 0 10px rgba(0 , 0, 0, 0.1);
-        display: none;
+        /* display: none; */
+        transform: translateX(120%);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding-top: 20px;
+        transition: all 0.7s ease;
     }
     .mobilenav a{
         width: 100%;
@@ -80,9 +65,6 @@
     .logo img{  
       width:20px;
     }
-    /* svg {
-        width: 20px;
-        cursor: pointer;} */
     span{
         font-style: normal;
         font-weight: 700;
@@ -121,14 +103,15 @@
         background-color: #F5EE84;
         cursor: pointer;
         color: #03045E;
+        border: 0.5px solid #03045E;
+        border-radius: 10px;
         
     }
-     button :hover{
+     /* button :hover{
         width: 125px;
         height: 50px;
-        background-color: #F5EE84;
-        box-shadow: #03045E;
-    }
+        background-color: #f40a1e;
+        box-shadow: hsl(0, 96%, 47%); */
     .img{
         width: 50%;
         padding-left: 80px;
@@ -230,7 +213,7 @@
 
     }
     #textarea{
-        width: 40%;
+        width: 30%;
         height: 70px;
         background-color: #FBF8CC;
         color: #03045E;
@@ -261,6 +244,9 @@
         }
        nav{
         display: none;
+       }
+       .mobilenav{
+        display: flex;
        }
        .menubutton{
         display: block;
@@ -473,11 +459,12 @@
 <script>
     function showmobilenav(){
         const mobilenav = document.querySelector('.mobilenav')
-        mobilenav.style.display = 'flex'
+        mobilenav.style.transform = 'translateX(0)'
     }
     function hidemobilenav(){
         const mobilenav = document.querySelector('.mobilenav')
-        mobilenav.style.display = 'none'
+        mobilenav.style.transform = 'translateX(120%)'
+        
     }
 </script>  
 </body>
