@@ -206,26 +206,48 @@
         display: none;
     }
     .contactform{
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        padding-left: 30%;
+
     }
     #form{
-        width: 80%;
+        width: 50%;
         height: 20px;
         background-color: #FBF8CC;
         color: #03045E;
         padding: 4px;
+        border: none;
+        border-bottom: 2px solid #454213;
         
     }
+    .textarea{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 4px;
+        padding-left: 20%;
+
+    }
     #textarea{
-        width: 100%;
-        height: 50px;
-        padding: 7px;
+        width: 70%;
+        height: 70px;
         background-color: #FBF8CC;
         color: #03045E;
         margin-top: 7px;
+    }
+    .conme{
+        display: flex;
+        justify-content: center;
+        margin-top: 9px;
+    }
+    #contactme{
+        border-radius: 20px;
+        width: 80px;
+        height: 50px;
+
     }
 
     @media (max-width: 768px) {
@@ -423,21 +445,25 @@
             <img id="lstimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUTDs10iPsW0-BcgtkGb0Ym3LEIBqWX8XVkQ&s" alt="" srcset="">
             <div class="contactlorem">
                 <p id="lstlorem">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam illo iure commodi omnis ex nesciunt voluptatem veniam sint possimus fuga, culpa distinctio nam magni quo dignissimos earum aliquam architecto! adipisicing elit. Enim iusto natus ipsa. Debitis facere dolores autem ipsum similique itaque nihil eum fugiat voluptatum quibusdam nobis vel obcaecati, ea nisi repellendus.</p>
-                <!-- <div id="contactinfo">
+                <div id="contactinfo">
                    <img src="instagram.svg" width="25px"  alt=""> Oluwa_lo_seyi<br>
                    <img src="x-twitter.svg" width="25px" alt="">  Oluwa_Lo_Seyii <br>
                    <img src="facebook-f.svg" width="20px" alt=""> Oluwa Lo Seyi
-                </div> -->
-                <div class="contactform">
-                    <input type="text" placeholder="fullname" id="form"><br>
-                    <input type="email" placeholder="your email" id="form">
-                    <textarea placeholder="your message" id="textarea"></textarea>
-                    <b></b>
-                    <button type="submit">submit</button>
-                    
                 </div>
             </div>
         </div>
+            <div class="contactform">
+                <input type="text" placeholder="Fullname" id="form"><br>
+                <input type="email" placeholder="Your Email" id="form">
+            </div>
+            <div class="textarea">
+                <textarea placeholder="Your Message" id="textarea"></textarea>
+            </div>
+            <b></b>
+            <div class="conme">
+                <button id="contactme" type="submit">Contact Me</button>
+            </div>
+            
 
 <script>
     function showmobilenav(){
