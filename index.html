@@ -23,19 +23,35 @@
     }
     nav{
         display: flex;
-        gap: 60px;
+        gap: 50px;
         font-style: normal;
         color: blue;
         font-weight: 600;
         padding-left: 120px;
         padding-right: 120px;
     }
-    
+    /* nav span{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 95px;
+        height: 100%;
+        background: linear-gradient(45deg, #454213, #03045E);
+        transition: 5s;
+    }
+    nav a:nth-child(1):hover~span{
+        left: 0;
+    }
+    nav a:nth-child(2):hover~span{
+        left: 95px;
+    } */
+
+
     .mobilenav{
         position: fixed;
         top: 0;
         right: 0;
-        height: 100vh;
+        height: 100%;
         width:250px;
         z-index: 999;
         background-color: rgba(245, 245, 245, 0.089);
@@ -64,10 +80,9 @@
     .logo img{  
       width:20px;
     }
-    svg {
-        display: ;
+    /* svg {
         width: 20px;
-        cursor: pointer;}
+        cursor: pointer;} */
     span{
         font-style: normal;
         font-weight: 700;
@@ -89,6 +104,7 @@
         font-style: normal;
         color: rgb(6, 6, 86);
         font-weight: 100;
+        line-height: 1rem;
     }
     .bold{
         display: block;
@@ -103,6 +119,15 @@
         width: 125px;
         height: 50px;
         background-color: #F5EE84;
+        cursor: pointer;
+        color: #03045E;
+        
+    }
+     button :hover{
+        width: 125px;
+        height: 50px;
+        background-color: #F5EE84;
+        box-shadow: #03045E;
     }
     .img{
         width: 50%;
@@ -141,6 +166,7 @@
     li{
        color: #03045E;
        font-weight: 700;
+       list-style: none;
     }
     .Work{
         width: 70%;
@@ -149,8 +175,7 @@
         display: flex;
         justify-content: space-between;
     }
-    h3{ color: #03045E;
-}
+    h3{ color: #03045E;}
     #case{
         width: 45%;
     }
@@ -180,6 +205,28 @@
    .menubutton{
         display: none;
     }
+    .contactform{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #form{
+        width: 80%;
+        height: 20px;
+        background-color: #FBF8CC;
+        color: #03045E;
+        padding: 4px;
+        
+    }
+    #textarea{
+        width: 100%;
+        height: 50px;
+        padding: 7px;
+        background-color: #FBF8CC;
+        color: #03045E;
+        margin-top: 7px;
+    }
 
     @media (max-width: 768px) {
         body{
@@ -197,6 +244,7 @@
        }
        .menubutton{
         display: block;
+        color: #03045E;
        }
         .thumbnail{
         display: flex;
@@ -212,6 +260,7 @@
         font-size: 18px;
         width: 100%;
         }
+        p{line-height: 3rem;}
        .bold{
         display: block;
         font-size: 80px;
@@ -227,11 +276,13 @@
         justify-content: center;
         padding-left: 10px;
     }
-        button{ width: 80%;
+        button{ width: 40%;
         height: 50px;
-        margin-top: 30px;
-        border-radius: 30%;
-        background-color: #F5EE84;}
+        margin-top: 5px;
+        border-radius: 10px;
+        background-color: #F5EE84;
+        cursor: pointer;
+    }
        #images{
         width: 350px;
         height: 350px;
@@ -286,13 +337,16 @@
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Work</a>
+            <span></span>
         </nav>
         <nav class="mobilenav">
-            <li onclick="hidemobilenav()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            
+            <li onclick="hidemobilenav()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#03045E"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Work</a>
             <a href="#">Contact</a>
+            <span></span>
         </nav>
 
 
@@ -302,7 +356,7 @@
             <img src="facebook-f.svg" style="width: 15px;" alt="">
         </div>
         <div>
-            <li class="menubutton" onclick="showmobilenav()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            <li class="menubutton" onclick="showmobilenav()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"  viewBox="0 -960 960 960" width="24px" fill="#03045E"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </div>
 
 
@@ -369,10 +423,18 @@
             <img id="lstimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUTDs10iPsW0-BcgtkGb0Ym3LEIBqWX8XVkQ&s" alt="" srcset="">
             <div class="contactlorem">
                 <p id="lstlorem">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam illo iure commodi omnis ex nesciunt voluptatem veniam sint possimus fuga, culpa distinctio nam magni quo dignissimos earum aliquam architecto! adipisicing elit. Enim iusto natus ipsa. Debitis facere dolores autem ipsum similique itaque nihil eum fugiat voluptatum quibusdam nobis vel obcaecati, ea nisi repellendus.</p>
-                <div id="contactinfo">
+                <!-- <div id="contactinfo">
                    <img src="instagram.svg" width="25px"  alt=""> Oluwa_lo_seyi<br>
                    <img src="x-twitter.svg" width="25px" alt="">  Oluwa_Lo_Seyii <br>
                    <img src="facebook-f.svg" width="20px" alt=""> Oluwa Lo Seyi
+                </div> -->
+                <div class="contactform">
+                    <input type="text" placeholder="fullname" id="form"><br>
+                    <input type="email" placeholder="your email" id="form">
+                    <textarea placeholder="your message" id="textarea"></textarea>
+                    <b></b>
+                    <button type="submit">submit</button>
+                    
                 </div>
             </div>
         </div>
