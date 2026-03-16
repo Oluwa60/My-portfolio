@@ -100,18 +100,35 @@
     button{
         width: 125px;
         height: 50px;
-        background-color: #F5EE84;
         cursor: pointer;
-        color: #03045E;
-        border: 0.5px solid #03045E;
+        color: #fff;
+        background-color: #03045e;
+        border: none;
         border-radius: 10px;
+        padding: 1em 2em;
+        position: relative;
+
+
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
         
     }
-     /* button :hover{
-        width: 125px;
-        height: 50px;
-        background-color: #f40a1e;
-        box-shadow: hsl(0, 96%, 47%); */
+    button ::after{
+        content: '';
+        position: absolute;
+        height:110%;
+        width: 105%;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom right, #454213, #040680 );
+        z-index: -1;
+
+    }
+    button:hover{
+        z-index: 0;
+        box-shadow: 70px 0 100px #454213, -70px 0 100px #040680 ;
+    }
     .img{
         width: 50%;
         padding-left: 80px;
@@ -218,6 +235,7 @@
         background-color: #FBF8CC;
         color: #03045E;
         margin-top: 7px;
+        outline: none;
     }
     .conme{
         display: flex;
@@ -342,6 +360,10 @@
     }
     .textarea{
         width: 150%;
+        outline: none;
+    }
+    #textarea{
+        outline: none;
     }
 
 
