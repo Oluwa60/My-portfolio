@@ -19,6 +19,23 @@
     }
     a{text-decoration: none;
      color: #03045E;
+     position: relative;
+     letter-spacing: 0.5px;
+     padding: 0 5px;
+
+    }
+    a:after{
+        content: "";
+        position: absolute;
+        background-color: #81790d;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    a:hover::after{
+        width: 100%;
 
     }
     nav{
@@ -30,6 +47,7 @@
         padding-left: 120px;
         padding-right: 120px;
     }
+    
     .mobilenav{
         position: fixed;
         top: 0;
@@ -105,15 +123,7 @@
         background-color: #03045e;
         border: none;
         border-radius: 10px;
-        padding: 1em 2em;
         position: relative;
-
-
-
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        
     }
     button ::after{
         content: '';
@@ -147,7 +157,7 @@
         color: #454213;
     }
     .aboutp{
-        margin-top: -60px;
+        margin-top: -20px;
         text-align: left;
         text-decoration: none;
         line-height: 1.5rem;
@@ -304,7 +314,7 @@
         height: 50px;
         margin-top: 5px;
         border-radius: 10px;
-        background-color: #F5EE84;
+        background-color: #03045E;
         cursor: pointer;
     }
        #images{
